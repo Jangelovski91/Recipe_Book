@@ -1,0 +1,9 @@
+.grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  ::ng-deep .mat-menu-content {
+    background-color: #2b7544 !important;
+  }
+  

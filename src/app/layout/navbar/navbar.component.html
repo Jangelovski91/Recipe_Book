@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand headerElem"><h4>{{ appTitle }}</h4></a>
+        </div>
+        <div class="nav-element">
+            <a routerLink="/recipes" class=" active recipe headerElem"><h5 style="cursor: pointer;">Recipes <mat-icon>library_books</mat-icon></h5></a>
+        </div>
+        <div class="nav-element">
+            <a routerLink="/shoppingList" class="recipe headerElem"><h5 style="cursor: pointer;">Shopping List <mat-icon>add_shopping_cart</mat-icon></h5></a>
+        </div>
+
+        <button mat-button [matMenuTriggerFor]="menu" class="headerElem">Manage <mat-icon>expand_more</mat-icon></button>
+        <mat-menu #menu="matMenu" class="headerElem">
+        <button mat-menu-item><a href="#" class="headerElem">Save Data</a></button>
+        <button mat-menu-item><a href="#" class="headerElem">Fetch Data</a></button>
+        </mat-menu>
+
+
+    </div>
+</nav>

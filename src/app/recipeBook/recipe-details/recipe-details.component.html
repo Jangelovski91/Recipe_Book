@@ -1,0 +1,35 @@
+<div class="roww">
+    <div class="col-xs-12">
+        <img [src]="recipe.imagePath" alt={{recipe.name}} class="img-responsive" style="max-height: 350px; border-radius: 15%;">
+    </div>
+</div>
+<div class="roww">
+    <div class="col-xs-12">
+        <h1>{{recipe.name}}</h1>
+    </div>
+</div>
+<div class="roww">
+    <div class="col-xs-12">
+        <button mat-button style="background-color: #b98643; color: white;" [matMenuTriggerFor]="menu">Manage Recipe<mat-icon>expand_more</mat-icon></button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click) = "onAddToShoppingList()">to Shopping List</button>
+                <button mat-menu-item>Edit Recipe</button>
+                <button mat-menu-item>Delete Recipe</button>
+            </mat-menu>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div>{{recipe.description}}</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div>
+            <ul class="col-xs-12">
+                <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+                    * {{ingredient.name}} - {{ingredient.amount}}  (pieces/gr.)
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
